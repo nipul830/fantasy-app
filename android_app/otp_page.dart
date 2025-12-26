@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 class OtpPage extends StatelessWidget {
   final String mobile;
@@ -17,7 +17,6 @@ class OtpPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             Text(
               "OTP sent to +91 $mobile",
               style: TextStyle(
@@ -25,7 +24,6 @@ class OtpPage extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-
             SizedBox(height: 20),
 
             TextField(
@@ -41,15 +39,15 @@ class OtpPage extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text("OTP Verified Successfully ✅"),
-                  ),
+                // Dummy OTP verify
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (route) => false,
                 );
               },
               child: Text("Verify OTP"),
             ),
-
           ],
         ),
       ),
