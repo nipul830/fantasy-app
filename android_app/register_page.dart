@@ -4,7 +4,9 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register")),
+      appBar: AppBar(
+        title: Text("Register"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -43,7 +45,9 @@ class RegisterPage extends StatelessWidget {
               width: double.infinity,
               height: 45,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Register logic later
+                },
                 child: Text("REGISTER"),
               ),
             ),
